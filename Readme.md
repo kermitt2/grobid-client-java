@@ -44,7 +44,7 @@ Full text processing of __136 PDF__ (total 3443 pages, in average 25 pages per P
 | 8  | 60.9   | 0.45      |
 | 10 | 60.2   | 0.44      |
 
-![Runtime Plot](resources/)
+![Runtime Plot](resources/20180929081805.png)
 
 As complementary info, GROBID processing of header, with of the 136 PDF and with `n=10` takes 3.82 s (more than 15 times faster than the complete full text processing because only the two first pages of the PDF are considered). In similar conditions, extraction and structuring of bibliographical references takes 27.9 s.
 

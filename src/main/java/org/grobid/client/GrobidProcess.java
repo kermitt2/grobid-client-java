@@ -30,8 +30,7 @@ public class GrobidProcess {
     public void process() {
         try {
             GrobidService grobidService = new GrobidService(this.gbdArgs);
-            //if (grobidService.isGrobidOk()) 
-            {
+            if (grobidService.isGrobidOk()) {
                 ExecutorService executor = Executors.newFixedThreadPool(gbdArgs.getNbConcurrency());
                 File dirInputPath = new File(gbdArgs.getInput());
 
