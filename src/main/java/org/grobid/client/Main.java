@@ -9,7 +9,7 @@ import java.util.*;
  * @author Patrice Lopez
  */
 public class Main {
-    private static List<String> availableServices = Arrays.asList("processFulltextDocument", "processHeaderDocument", "processReference");
+    private static List<String> availableServices = Arrays.asList("processFulltextDocument", "processHeaderDocument", "processReferences");
 
     /**
      * Arguments of the command.

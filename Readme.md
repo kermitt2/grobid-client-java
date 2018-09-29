@@ -16,7 +16,7 @@ Parameters:
 
 * `-out`: path to the directory where to put the results
 
-* `-exe`: GROBID service to be used, one of `[processFulltextDocument, processHeaderDocument, processReference]` (default `processFulltextDocument`)
+* `-exe`: GROBID service to be used, one of `[processFulltextDocument, processHeaderDocument, processReferences]` (default `processFulltextDocument`)
 
 * `-n`: concurrency for service usage (default 10)
 
@@ -37,20 +37,20 @@ Full text processing of __136 PDF__ (total 3443 pages, in average 25 pages per P
 
 | n  | runtime (s)| s/PDF | 
 |----|------------|-------|
-| 1  |   | 1.       | 
-| 2  |   | 0.       |
-| 3  |   | 0.       |
-| 5  |   | 0.       |
-| 8  |   | 0.       |
-| 10 | 60.2  | 0.       |
+| 1  | 210.9  | 1.55      | 
+| 2  | 117.2  | 0.86      |
+| 3  | 85.5   | 0.63      |
+| 5  | 69.8   | 0.51      |
+| 8  | 60.9   | 0.45      |
+| 10 | 60.2   | 0.44      |
 
 ![Runtime Plot](resources/)
 
-As complementary info, GROBID processing of header, with of the 136 PDF and with `n=10` takes 5.37 s (8 times faster than the complete full text processing because only the two first pages of the PDF are considered). In similar conditions, extraction and structuring of bibliographical references takes 27.1 s.
+As complementary info, GROBID processing of header, with of the 136 PDF and with `n=10` takes 3.82 s (more than 15 times faster than the complete full text processing because only the two first pages of the PDF are considered). In similar conditions, extraction and structuring of bibliographical references takes 27.9 s.
 
 ## Todo
 
-Benchmarking with more files (e.g. million ISTEX PDF). Also implement existing GROBID services for text input (date, name, affiliation/address, raw bibliographical references, etc.). YAML config file. Better support for parameters (including elements where to put coordinates).
+Benchmarking with more files (e.g. million ISTEX PDF). Also implement existing GROBID services for text input (date, name, affiliation/address, raw bibliographical references, etc.). Better support for parameters (including elements where to put coordinates).
 
 ## License
 
