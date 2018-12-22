@@ -8,7 +8,7 @@
     <groupId>grobid-client-java</groupId>
     <artifactId>org.grobid.client</artifactId>
     <packaging>jar</packaging>
-    <version>0.5.2-SNAPSHOT</version>
+    <version>0.5.4-SNAPSHOT</version>
 
     <name>grobid-client-java</name>
     <description>Java client for GROBID REST services.</description>

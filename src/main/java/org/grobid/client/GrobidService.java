@@ -76,7 +76,8 @@ public class GrobidService {
                 StringBody contentString = new StringBody("" + end);
                 multipartEntity.addPart("end", contentString);
             }
-
+            //multipartEntity.addPart("consolidateHeader", new StringBody("1"));
+            //multipartEntity.addPart("consolidateCitations", new StringBody("1"));
             conn.setRequestProperty("Content-Type", multipartEntity.getContentType().getValue());
             OutputStream out = conn.getOutputStream();
             try {
