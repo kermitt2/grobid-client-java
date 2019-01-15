@@ -6,6 +6,8 @@ This Java project can be used to process in an efficient concurrent manner a set
 
 You need first to install and start the *grobid* service, latest stable version, see the [documentation](http://grobid.readthedocs.io/). It is assumed that the server will run on the address `http://localhost:8070`. You can change the server address by editing the file `grobid-client.properties`.
 
+Build the client:
+
 > mvn clean install
 
 ## Usage
