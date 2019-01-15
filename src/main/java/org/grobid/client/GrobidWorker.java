@@ -54,6 +54,12 @@ public class GrobidWorker implements Runnable {
         try {
             GrobidService grobidService = new GrobidService(this.gbdArgs, this.start, this.end);
             String tei = grobidService.runGrobid(pdfFile);
+            File outputFile = new File(this.gbdArgs.getOutput() + File.separator + pdfFile.getName().replace(".pdf", ".tei.xml"));
+            try {
+                FileUtils.writeStringToFile(outputFile, tei, "UTF-8");
+            } catch(Exception e) {
+                logger.error("\t\t error wiring result under path " + outputFile.getPath());
+            }
             logger.info("\t\t " + pdfFile.getPath() + " processed.");
         } catch (GrobidTimeoutException e) {
             logger.warn("Processing of " + pdfFile.getPath() + " timed out");
