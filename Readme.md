@@ -37,18 +37,18 @@ This command will process all the PDF files present in the input directory (file
 
 Full text processing of __136 PDF__ (total 3443 pages, in average 25 pages per PDF) on Intel Core i7-4790K CPU 4.00GHz, 4 cores (8 threads), 16GB memory, n being the concurrency parameter:
 
-| n  | runtime (s)| s/PDF | 
-|----|------------|-------|
-| 1  | 210.9  | 1.55      | 
-| 2  | 117.2  | 0.86      |
-| 3  | 85.5   | 0.63      |
-| 5  | 69.8   | 0.51      |
-| 8  | 60.9   | 0.45      |
-| 10 | 60.2   | 0.44      |
+| n  | runtime (s)| s/PDF | PDF/s |
+|----|------------|-------|-------|
+| 1  | 210.9  | 1.55      | 0.64 |
+| 2  | 117.2  | 0.86      | 1.16 | 
+| 3  | 85.5   | 0.63      | 1.59 |
+| 5  | 69.8   | 0.51      | 1.95 |
+| 8  | 60.9   | 0.45      | 2.23 |
+| 10 | 60.2   | 0.44      | 2.26 |
 
 ![Runtime Plot](resources/20180929081805.png)
 
-As complementary info, GROBID processing of header, with of the 136 PDF and with `n=10` takes 3.82 s (more than 15 times faster than the complete full text processing because only the two first pages of the PDF are considered). In similar conditions, extraction and structuring of bibliographical references takes 27.9 s.
+As complementary info, GROBID processing of header of the 136 PDF and with `n=10` takes 3.82 s (more than 15 times faster than the complete full text processing because only the two first pages of the PDF are considered), 35.60 PDF/s. In similar conditions, extraction and structuring of bibliographical references takes 27.9 s, 4.87 PDF/s.
 
 ## Todo
 
